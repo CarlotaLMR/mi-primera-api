@@ -14,6 +14,10 @@ app.get('/user', (c) => {
   })
 })
 
+app.get('/health', (c) => {
+  return c.json({ "status": "ok" })
+})
+
 serve({
   fetch: app.fetch,
   port: 3000
